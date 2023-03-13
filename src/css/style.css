@@ -70,6 +70,37 @@ body{
     width: 140px;
 }
 
+#clear{
+    font-size: 2em;
+}
+
+.btn-style-clear{
+    font-size: 2em;
+    width: 60px;
+    height: 60px;
+    font-size: 2.2em;
+    padding: 2px;   
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    background-color: #535353;
+}
+
+.btn-style-clear:hover{
+    cursor: pointer;
+    filter: brightness(150%);
+}
+
+.btn-style-clear:active{
+    filter: brightness(50%);
+}
+
+input[type="text"]::-webkit-clear-button {
+    display: none;
+  }
+
 @media(max-width:350px){
     *{
         scale: 0.96;

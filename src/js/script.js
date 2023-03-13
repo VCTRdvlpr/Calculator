@@ -15,6 +15,8 @@ numbersContainer.addEventListener("click", function (event) {
     handleOperator(buttonValue);
   } else if (button.classList.contains("btn-style")) {
     handleNumber(buttonValue);
+  } else if (button.classList.contains("clear-btn-style")) {
+    clearScreen();
   }
 });
 
@@ -70,11 +72,14 @@ function handleNumber(number) {
 }
 
 function clearScreen() {
-    answerScreen.value = "";
-    firstNumber = "";
-    secondNumber = "";
-    currentOperator = null;
-    shouldResetScreen = false;
-  }
+  answerScreen.value = "";
+  firstNumber = "";
+  secondNumber = "";
+  currentOperator = null;
+  shouldResetScreen = false;
+}
 
- clearBtn.addEventListener('click', clearScreen)
+  clearBtn.addEventListener('click', function(event) {    
+    event.preventDefault();
+    clearScreen();
+  });
